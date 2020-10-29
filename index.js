@@ -49,3 +49,28 @@ function posNeg(arr){
 console.log(posNeg([1,2,3,-3,-4,-5]));
 console.log(posNeg([1,2,3,3,4,5]));
 console.log(posNeg([-1,-2,-3,-3,-4,-5]));
+
+// Problem #4
+
+function letterCount(str,spacer){
+    var newStr = "";
+
+    for(var i = 0; i < str.length; i++){
+        var char = str.charAt(i);
+        var counter = 0;
+        for (var f = 0; f < str.length; f++){
+            if(str.charAt(f) === char){
+                counter ++;
+            }
+        }
+        newStr += counter;
+        newStr += spacer;
+    }
+
+    return newStr.slice(0,-1);
+}
+
+console.log(letterCount("hello world","-"));
+console.log(letterCount("challenge","/"));
+console.log(letterCount("yellowHELLOmElEl","*"));
+
