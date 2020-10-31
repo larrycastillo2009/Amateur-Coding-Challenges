@@ -119,3 +119,14 @@ function findAge(date){
         return parseInt(yyyy-1) - parseInt(bday[2]);
 }
 
+// problem #7
+function stringArray(str){
+    var nStr = str.split(" ");
+    return nStr;
+}
+
+console.log(stringArray("Trick or Treat"));
+console.log(stringArray("Hi my name is Larry."));
+
+proble
+
