@@ -128,5 +128,12 @@ function stringArray(str){
 console.log(stringArray("Trick or Treat"));
 console.log(stringArray("Hi my name is Larry."));
 
-proble
+// problem #8
+function countInstances(string, word) {
+    var nStr = string.toLowerCase();
+    return nStr.split(word).length - 1;
+}
+
+console.log(countInstances("The pumpkin rolled down the hill and under someone's car.","the"));
+console.log(countInstances("Hello my name is sam. Hello.","hello"));
 
