@@ -74,3 +74,31 @@ console.log(letterCount("hello world","-"));
 console.log(letterCount("challenge","/"));
 console.log(letterCount("yellowHELLOmElEl","*"));
 
+// problem #5
+function splitString(str){
+    var upStr = str.toUpperCase();
+    var splStr = upStr.split(";");
+    var arr = [];
+    var name = [];
+    var solution = "";
+
+    for (var i = 0; i < splStr.length; i++){
+        arr.push(splStr[i].split(":"));
+        name.push(arr[i][1] + "," + arr[i][0]);
+        name[i] = "(" + name[i] + ")";
+        name.sort();
+    }
+
+    name.forEach(function (fname) {
+        solution+= fname
+    })
+
+    return solution;
+}
+// Problem #6
+
+function findAge(date){
+    var age = 0;
+
+}
+
