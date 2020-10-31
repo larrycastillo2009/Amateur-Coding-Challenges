@@ -98,7 +98,24 @@ function splitString(str){
 // Problem #6
 
 function findAge(date){
-    var age = 0;
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+    var yyyy = today.getFullYear();
+    var dateToString = String(date);
+    var bday = dateToString.split("/");
 
+    console.log(dd);
+    console.log(mm);
+    console.log(yyyy);
+    console.log(bday);
+
+
+    if(parseInt(bday[0]) > parseInt(mm)){
+        return parseInt(yyyy) - parseInt(bday[2]);
+    }else if (parseInt(bday[0]) == parseInt(mm) && parseInt(bday[1] > parseInt(dd))){
+        return parseInt(yyyy) - parseInt(bday[2]);
+    }else
+        return parseInt(yyyy-1) - parseInt(bday[2]);
 }
 
